@@ -46,7 +46,7 @@ void onMouse(int event, int x, int y, int, void*) {
 
 int main(int argc, char** argv)
 {
-    //string filename = "C:\\Users\\jungle\\Desktop\\slow_traffic_small.mp4";
+    //string filename = "C:\\Users\\user001\\Desktop\\slow_traffic_small.mp4";
     //VideoCapture video(filename);
     VideoCapture video(0);
     namedWindow("CamshiftOBJTracking");
