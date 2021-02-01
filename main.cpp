@@ -84,6 +84,7 @@ int main(int argc, char** argv)
             }
             calcBackProject(&hue, 1, 0, hist, backproj, &phranges);
             backproj &= mask;
+
             RotatedRect trackBox = CamShift(backproj, trackWindow, TermCriteria(TermCriteria::EPS | TermCriteria::COUNT, 10, 1));
             Point2f points[4];
             trackBox.points(points);
@@ -95,6 +96,7 @@ int main(int argc, char** argv)
                 line(image, centers[i], centers[i + 1], Scalar(0, 255, 0), 1);
             }
         }
+
         if (selectObject && selection.width > 0 && selection.height > 0)
         {
             Mat roi(image, selection);
